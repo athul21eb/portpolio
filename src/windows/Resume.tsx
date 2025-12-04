@@ -7,7 +7,7 @@ import "react-pdf/dist/Page/TextLayer.css";
 import { Document, Page, pdfjs } from "react-pdf";
 
 // Use CDN worker
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 const Resume = () => {
   const [numPages, setNumPages] = useState<number>(1);
@@ -28,7 +28,7 @@ const Resume = () => {
         <a
           href="/files/resume.pdf"
           download
-          className="cursor-true"
+          className="cursor-pointer"
           title="Download Resume"
         >
           <Download className="icon" />
@@ -81,7 +81,7 @@ const Resume = () => {
                 title="Next page"
                 className="rounded border border-white/20 p-2 text-white transition hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-40"
               >
-                <ChevronRight className="icon" fill="black"/>
+                <ChevronRight className="icon" fill="black" />
               </button>
             </div>
           </div>

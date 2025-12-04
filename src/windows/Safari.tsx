@@ -50,10 +50,10 @@ const Safari = () => {
                 <img src={image} alt={title} />
               </div>
               <div className="content">
-                {date}
-                {title}
+               <p> {date}</p>
+                <h2>{title}</h2>
                 <a href={link} target="_blank" rel="noopener noreferrer">
-                  Check out the full post <MoveRight className="icon-hove"/>
+                  Check out the full post <MoveRight className="icon-hover"/>
 
                 </a>
               </div>

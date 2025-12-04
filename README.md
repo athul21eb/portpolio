@@ -1,31 +1,5 @@
 # React + TypeScript + Vite
 
-{
-  "compilerOptions": {
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
-    "composite": true,
-    "target": "ES2022",
-    "lib": ["ES2023"],
-    "module": "ESNext",
-    "types": ["node"],
-    "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
-  },
-  "include": ["vite.config.ts"]
-}
-
 
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
