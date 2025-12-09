@@ -24,7 +24,6 @@ const Photos = () => {
             {photosLinks.map((link) => (
               <li
                 key={link.id}
-                // onClick={() => setActiveId(link.id)}
                 className="text-gray-700 hover:bg-gray-200"
               >
                 <img src={link.icon} alt={link.title} />

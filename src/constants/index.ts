@@ -518,6 +518,6 @@ const WINDOW_CONFIG = {
 
   txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-} as Record<string, WindowConfig>;
+} satisfies Record<string, WindowConfig>;
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };
