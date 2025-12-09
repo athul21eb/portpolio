@@ -1,7 +1,12 @@
 import { WindowControls } from "@components";
 import { locations } from "@constants";
 import { WindowWrapper } from "@hoc";
-import { useLocationStore, type Location, useWindowStore } from "@store";
+import {
+  useLocationStore,
+  type Location,
+  useWindowStore,
+  type WindowKey,
+} from "@store";
 import clsx from "clsx";
 import { SearchIcon } from "lucide-react";
 
@@ -45,7 +50,7 @@ const Finder = () => {
 
       if (item.kind) {
         // Window keys are constructed as <fileType><kind> to match WINDOW_CONFIG entries like 'txtfile' or 'imgfile'
-        return openWindow(`${item.fileType}${item.kind}`, item);
+        return openWindow(`${item.fileType}${item.kind}` as WindowKey, item);
       }
     }
     if (item.kind === "folder") return setActiveLocation(item);
