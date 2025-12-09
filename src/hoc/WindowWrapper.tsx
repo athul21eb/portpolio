@@ -1,5 +1,5 @@
 import { useGSAP } from "@gsap/react";
-import { useWindowStore, type WindowKey } from "@store/windows";
+import { useWindowStore, type WindowKey } from "@store";
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
 import { type ComponentType, useRef, useLayoutEffect } from "react";

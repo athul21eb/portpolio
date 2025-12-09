@@ -1,4 +1,6 @@
-const navLinks = [
+import type { WindowKey } from "@store";
+
+const navLinks: Array<{ id: number; name: string; type: WindowKey }> = [
   {
     id: 1,
     name: "Projects",
@@ -77,25 +79,31 @@ const dockApps = [
 const blogPosts = [
   {
     id: 1,
-    date: "Sep 2, 2025",
-    title:
-      "TypeScript Explained: What It Is, Why It Matters, and How to Master It",
-    image: "/images/blog1.png",
-    link: "https://jsmastery.com/blog/typescript-explained-what-it-is-why-it-matters-and-how-to-master-it",
+    date: "Jan 2025",
+    title: "FireBoots – Full-Featured E-Commerce Platform",
+    image: "/projects/fireboots-logo.png",
+    link: "https://github.com/athul21eb/E-COMMERCE-PROJECT-FRONTEND",
   },
-  {
-    id: 2,
-    date: "Aug 28, 2025",
-    title: "The Ultimate Guide to Mastering Three.js for 3D Development",
-    image: "/images/blog2.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-three-js-for-3d-development",
-  },
+  // {
+  //   id: 2,
+  //   date: "Dec 2024",
+  //   title: "DUX – Mentorship Service Platform (In Development)",
+  //   image: "/projects/dux-logo.png",
+  //   link: "https://github.com/athul21eb/DUX",
+  // },
   {
     id: 3,
-    date: "Aug 15, 2025",
-    title: "The Ultimate Guide to Mastering GSAP Animations",
-    image: "/images/blog3.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-gsap-animations",
+    date: "Nov 2024",
+    title: "Blog App – Simple Blogging Platform",
+    image: "/projects/blog-logo.png",
+    link: "https://github.com/athul21eb/Blog-App---Nest-js/",
+  },
+  {
+    id: 4,
+    date: "Oct 2024",
+    title: "Dev Events Platform – Full-Stack Event Management",
+    image: "/projects/devevents-logo.png",
+    link: "https://github.com/athul21eb/dev-events-next.js-16",
   },
 ];
 
@@ -104,17 +112,17 @@ const techStack = [
     category: "Frontend",
     items: ["React.js", "Next.js", "TypeScript"],
   },
-  {
-    category: "Mobile",
-    items: ["React Native", "Expo"],
-  },
+  // {
+  //   category: "Mobile",
+  //   items: ["React Native", "Expo"],
+  // },
   {
     category: "Styling",
     items: ["Tailwind CSS", "Sass", "CSS"],
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express", "NestJS", "Hono"],
+    items: ["Node.js", "Express", "NestJS"],
   },
   {
     category: "Database",
@@ -132,28 +140,28 @@ const socials = [
     text: "Github",
     icon: "/icons/github.svg",
     bg: "#f4656b",
-    link: "https://github.com/JavaScript-Mastery-Pro",
+    link: "https://github.com/athul21eb",
   },
-  {
-    id: 2,
-    text: "Platform",
-    icon: "/icons/atom.svg",
-    bg: "#4bcb63",
-    link: "https://jsmastery.com/",
-  },
+  // {
+  //   id: 2,
+  //   text: "Platform",
+  //   icon: "/icons/atom.svg",
+  //   bg: "#4bcb63",
+  //   link: "https://athul.com/",
+  // },
   {
     id: 3,
     text: "Twitter/X",
     icon: "/icons/twitter.svg",
     bg: "#ff866b",
-    link: "https://x.com/jsmasterypro",
+    link: "https://x.com/athul",
   },
   {
     id: 4,
     text: "LinkedIn",
     icon: "/icons/linkedin.svg",
     bg: "#05b6f6",
-    link: "https://www.linkedin.com/company/javascriptmastery/posts/?feedView=all",
+    link: "https://www.linkedin.com/in/athulkrishna-e-b-369053249/",
   },
 ];
 
@@ -188,19 +196,23 @@ const photosLinks = [
 const gallery = [
   {
     id: 1,
-    img: "/images/gal1.png",
+    img: "/images/a.jpg",
+    name:"athul"
   },
   {
     id: 2,
-    img: "/images/gal2.png",
+    img: "/projects/devevent-1.png",
+    name:"dev events"
   },
   {
     id: 3,
-    img: "/images/gal3.png",
+    img: "/projects/blog-2.png",
+    name:"blog"
   },
   {
     id: 4,
-    img: "/images/gal4.png",
+    img: "/projects/fireboots-1.png",
+    name:"fire boots"
   },
 ];
 
@@ -222,167 +234,165 @@ const WORK_LOCATION = {
   icon: "/icons/work.svg",
   kind: "folder",
   children: [
-    // ▶ Project 1
+    // ▶ Project 1 — Fire Boots Ecommerce (from your GitHub repo)
     {
-      id: 5,
-      name: "Nike Ecommerce Website Application",
+      id: 20,
+      name: "Fire Boots Ecommerce",
       icon: "/images/folder.png",
       kind: "folder",
-      position: "top-10 left-5", // icon position inside Finder
-      windowPosition: "top-[5vh] left-5", // optional: Finder window position
+      position: "top-10 left-5",
+      windowPosition: "top-20 right-5",
       children: [
         {
           id: 1,
-          name: "Nike Project.txt",
+          name: "Fire Boots Ecommerce.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
           description: [
-            "The Nike eCommerce website is a sleek and modern platform designed for shopping the latest Nike collections.",
-            "Instead of a simple online store, it delivers an immersive experience with bold visuals, interactive product displays, and smooth navigation.",
-            "Think of it like walking into a flagship Nike store—but right from your phone or laptop.",
-            "It's built with Next.js and Tailwind, ensuring fast performance, responsive design, and a clean, premium look.",
+            "Fire Boots Ecommerce is a full-featured shopping platform built using the MERN stack (MongoDB, Express, React, Node.js).",
+            "The frontend provides a smooth and responsive shopping experience with modern UI and fast performance.",
+            "Users can browse products, add items to cart, manage orders, and explore categories with clean navigation.",
+            "This project focuses on real-world ecommerce workflow with secure backend APIs and optimized user experience.",
           ],
         },
         {
           id: 2,
-          name: "nike.com",
+          name: "fireboots.com",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/fZdTYswuZjU?si=Awjl-pIst9e09_UU",
+          href: "https://fireboots-client-athuleb21-gmailcoms-projects.vercel.app/",
           position: "top-10 right-20",
         },
         {
-          id: 4,
-          name: "nike.png",
+          id: 3,
+          name: "fireboots-1.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
           position: "top-52 right-80",
-          imageUrl: "/images/project-1.png",
+          imageUrl: "/projects/fireboots-1.png",
         },
         {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
+          id: 4,
+          name: "fireboots-2.png",
+          icon: "/images/image.png",
           kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
+          fileType: "img",
           position: "top-60 right-20",
+          imageUrl: "/projects/fireboots-2.png",
         },
       ],
     },
-
-    // ▶ Project 2
+    // ▶ Project 2 — Blog App (React + NestJS)
     {
-      id: 6,
-      name: "AI Resume Analyzer",
+      id: 21,
+      name: "Blog App",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-52 right-80",
-      windowPosition: "top-[20vh] left-7",
+      windowPosition: "top-40 right-55",
       children: [
         {
           id: 1,
-          name: "AI Resume Analyzer Project.txt",
+          name: "Blog App Project.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 right-10",
           description: [
-            "AI Resume Analyzer is a smart tool that helps you perfect your resume with instant feedback.",
-            "Instead of guessing what recruiters want, you get AI-powered insights on keywords, formatting, and overall impact.",
-            "Think of it like having a career coach—pointing out strengths, fixing weaknesses, and boosting your chances of landing interviews.",
-            "It's built with Next.js and Tailwind, so it runs fast, looks professional, and works seamlessly on any device.",
+            "A full-stack Blog Application built with React (frontend) and Nest.js (backend).",
+            "Users can create blogs, edit posts, delete content, authenticate, and manage profiles.",
+            "The UI is responsive and fast, while Nest.js ensures secure APIs and structured backend logic.",
+            "This project is designed like a compact medium-style blogging platform.",
           ],
         },
         {
           id: 2,
-          name: "ai-resume-analyzer.com",
+          name: "blogapp.com",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/iYOz165wGkQ?si=R1hs8Legl200m0Cl",
+          href: "https://blog-app-khaki-pi.vercel.app/",
           position: "top-20 left-20",
         },
         {
-          id: 4,
-          name: "ai-resume-analyzer.png",
+          id: 3,
+          name: "blogapp-1.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
           position: "top-52 left-80",
-          imageUrl: "/images/project-2.png",
+          imageUrl: "/projects/blog-1.png",
         },
         {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
+          id: 4,
+          name: "blogapp-2.png",
+          icon: "/images/image.png",
           kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
+          fileType: "img",
           position: "top-60 left-5",
+          imageUrl: "/projects/blog-2.png",
         },
       ],
     },
 
-    // ▶ Project 3
+    // ▶ Project 3 — DevEvents (Next.js 16)
     {
-      id: 7,
-      name: "Food Delivery App",
+      id: 22,
+      name: "DevEvents",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-80",
-      windowPosition: "top-[33vh] left-7",
+      windowPosition: "top-90 right-15",
       children: [
         {
           id: 1,
-          name: "Food Delivery App Project.txt",
+          name: "DevEvents Project.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
           description: [
-            "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
-            "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
-            "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
-            "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
+            "DevEvents is a simple event booking and listing application built with Next.js 16.",
+            "Users can browse developer-focused events, view details, and explore event categories.",
+            "The app is fast, clean, responsive, and utilises modern Next.js features.",
+            "Ideal for showcasing how Next.js handles routing, data fetching, and UI layouts.",
           ],
         },
         {
           id: 2,
-          name: "food-delivery-app.com",
+          name: "devevents.com",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-",
+          href: "https://dev-events-next-js-16-one.vercel.app/",
           position: "top-10 right-20",
         },
         {
-          id: 4,
-          name: "food-delivery-app.png",
+          id: 3,
+          name: "devevents-1.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
           position: "top-52 right-80",
-          imageUrl: "/images/project-3.png",
+          imageUrl: "/projects/devevent-1.png",
         },
         {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
+          id: 4,
+          name: "devevents-2.png",
+          icon: "/images/image.png",
           kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
+          fileType: "img",
           position: "top-60 right-20",
+          imageUrl: "/projects/devevent-2.png",
         },
       ],
     },
   ],
 };
-
 const ABOUT_LOCATION = {
   id: 2,
   type: "about",
@@ -397,26 +407,26 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-10 left-5",
-      imageUrl: "/images/adrian.jpg",
+      imageUrl: "/images/a.jpg",
     },
-    {
-      id: 2,
-      name: "casual-me.png",
-      icon: "/images/image.png",
-      kind: "file",
-      fileType: "img",
-      position: "top-28 right-72",
-      imageUrl: "/images/adrian-2.jpg",
-    },
-    {
-      id: 3,
-      name: "conference-me.png",
-      icon: "/images/image.png",
-      kind: "file",
-      fileType: "img",
-      position: "top-52 left-80",
-      imageUrl: "/images/adrian-3.jpeg",
-    },
+    // {
+    //   id: 2,
+    //   name: "casual-me.png",
+    //   icon: "/images/image.png",
+    //   kind: "file",
+    //   fileType: "img",
+    //   position: "top-28 right-72",
+    //   imageUrl: "/images/a.jpg",
+    // },
+    // {
+    //   id: 3,
+    //   name: "conference-me.png",
+    //   icon: "/images/image.png",
+    //   kind: "file",
+    //   fileType: "img",
+    //   position: "top-52 left-80",
+    //   imageUrl: "/images/a.jpg",
+    // },
     {
       id: 4,
       name: "about-me.txt",
@@ -425,12 +435,12 @@ const ABOUT_LOCATION = {
       fileType: "txt",
       position: "top-60 left-5",
       subtitle: "Meet the Developer Behind the Code",
-      image: "/images/adrian.jpg",
+      image: "/images/a.jpg",
       description: [
-        "Hey! I’m Adrian 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
-        "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
-        "I’m big on clean UI, good UX, and writing code that doesn’t need a search party to debug.",
-        "Outside of dev work, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅",
+        "Hi, I'm Athul 👋 — a MERN Stack Developer passionate about building scalable, high-performance, and user-centric web applications.",
+        "I specialize in JavaScript, TypeScript, React, Next.js, Node.js, Express.js, and MongoDB, with hands-on experience using modern tools and architectures like Redux Toolkit, Prisma, MVC, SOLID, and Clean Architecture.",
+        "I enjoy creating clean UI, smooth UX, and writing maintainable code that solves real problems without unnecessary complexity.",
+        "Beyond coding, you’ll probably find me experimenting with new UI ideas, I’m always experimenting, learning something new, and bringing those ideas into my work",
       ],
     },
   ],
@@ -508,6 +518,6 @@ const WINDOW_CONFIG = {
 
   txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-}as Record<string, WindowConfig>;
+} satisfies Record<string, WindowConfig>;
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };
