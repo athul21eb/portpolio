@@ -189,9 +189,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Athul**
 
-- 🌐 Portfolio: [Your Portfolio URL]
+- 🌐 Portfolio: [[Your Portfolio URL](https://portfolio-brown-nine-78.vercel.app/)]
 - 💼 GitHub: [@athul21eb](https://github.com/athul21eb)
-- 📧 Email: [your.email@example.com]
+- 📧 Email: [athul.eb21@gmail.com]
 
 ## 🙏 Acknowledgments
 
