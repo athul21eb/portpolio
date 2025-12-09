@@ -1,75 +1,210 @@
-# React + TypeScript + Vite
+# 🍎 macOS Portfolio
 
+A modern, interactive macOS-inspired portfolio that brings the elegance of Apple's operating system to the web. Built with cutting-edge technologies including React 19, Vite, TailwindCSS v4, and GSAP for silky-smooth animations.
 
+![macOS Portfolio Banner](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind-4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## ✨ Features
 
-Currently, two official plugins are available:
+### 🎨 **Authentic macOS Experience**
+- Pixel-perfect recreation of macOS UI elements
+- Dock-style navigation with bounce effects
+- Draggable, resizable floating windows
+- Window management (minimize, maximize, close)
+- Native-looking context menus and tooltips
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### ⚡ **Lightning-Fast Performance**
+- Vite-powered development with HMR (Hot Module Replacement)
+- Optimized production builds with code splitting
+- Tree-shaking for minimal bundle size
 
-## React Compiler
+### 🌀 **Smooth Animations**
+- GSAP-powered animations for professional motion design
+- Micro-interactions throughout the interface
+- Smooth transitions between states
+- Hardware-accelerated animations
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 📄 **PDF Integration**
+- Built-in PDF viewer using react-pdf
+- View resumes, certificates, and documents seamlessly
+- Zoom, pan, and navigation controls
 
-## Expanding the ESLint configuration
+### 🛠️ **Developer Experience**
+- TypeScript for type safety and better DX
+- Zustand for clean state management
+- ESLint configured for code quality
+- Component-based architecture
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Quick Start
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Node.js 18.x or higher
+- npm or yarn package manager
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/athul21eb/portpolio.git
+cd portpolio
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Visit `http://localhost:5173` to see your portfolio in action.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📜 Available Scripts
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server with hot reload |
+| `npm run build` | Build optimized production bundle |
+| `npm run preview` | Preview production build locally |
+| `npm run lint` | Run ESLint to check code quality |
+
+## 📁 Project Structure
+
 ```
+macos-portfolio/
+├── 📂 src/
+│   ├── 📂 components/       # Reusable UI components
+│   ├── 📂 assets/           # Images, fonts, static files
+│   ├── 📂 pages/            # Page-level components
+│   ├── 📂 store/            # Zustand state management
+│   ├── 📂 styles/           # Global styles and Tailwind config
+│   ├── 📂 utils/            # Helper functions
+│   └── 📄 main.tsx          # Application entry point
+├── 📂 public/               # Static assets
+├── 📄 package.json          # Dependencies and scripts
+├── 📄 tsconfig.json         # TypeScript configuration
+├── 📄 vite.config.ts        # Vite configuration
+├── 📄 tailwind.config.js    # Tailwind CSS configuration
+└── 📄 README.md             # Project documentation
+```
+
+## 🧰 Tech Stack
+
+### Core
+
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| **React** | 19.x | UI framework |
+| **TypeScript** | 5.x | Type safety |
+| **Vite** | 7.x | Build tool |
+| **TailwindCSS** | 4.x | Styling |
+
+### State & Animation
+
+- **Zustand** - Lightweight state management
+- **GSAP** - Professional-grade animations
+- **@gsap/react** - React bindings for GSAP
+- **Immer** - Immutable state updates
+
+### Utilities
+
+- **Day.js** - Date/time manipulation
+- **Lucide React** - Beautiful icon library
+- **React Tooltip** - Accessible tooltips
+- **React PDF** - PDF rendering
+- **PDF.js** - PDF parsing engine
+
+### Development
+
+- **ESLint** - Code linting
+- **TypeScript ESLint** - TypeScript-specific rules
+- **@vitejs/plugin-react** - React support for Vite
+
+## 🎨 Customization
+
+### Personalizing Your Portfolio
+
+1. **Update Content**: Modify components in `src/components/` and `src/pages/`
+2. **Change Theme**: Edit Tailwind configuration in `tailwind.config.js`
+3. **Add Projects**: Create new project components and add to your portfolio
+4. **Customize Dock**: Update dock items in your state management store
+
+### Adding New Windows
+
+```tsx
+// Example: Adding a new window component
+import { useWindowStore } from './store/windowStore';
+
+const MyNewWindow = () => {
+  const { openWindow } = useWindowStore();
+
+  return (
+    <div onClick={() => openWindow('mywindow', 'My Window', <Content />)}>
+      Open Window
+    </div>
+  );
+};
+```
+
+## 🌐 Deployment
+
+### Deploy to Vercel (Recommended)
+
+```bash
+npm install -g vercel
+vercel
+```
+
+### Deploy to Netlify
+
+```bash
+npm run build
+# Drag and drop the 'dist' folder to Netlify
+```
+
+### Deploy to GitHub Pages
+
+```bash
+npm run build
+# Push 'dist' folder to gh-pages branch
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👨‍💻 Author
+
+**Athul**
+
+- 🌐 Portfolio: [Your Portfolio URL]
+- 💼 GitHub: [@athul21eb](https://github.com/athul21eb)
+- 📧 Email: [your.email@example.com]
+
+## 🙏 Acknowledgments
+
+- Inspired by the beautiful design of macOS
+- Built with amazing open-source technologies
+- Thanks to the React and Vite communities
+
+---
+
+<div align="center">
+
+**[⭐ Star this repo](https://github.com/athul21eb/portpolio)** if you find it helpful!
+
+Made with ❤️ and lots of ☕
+
+</div>
