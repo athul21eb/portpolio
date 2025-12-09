@@ -1,5 +1,5 @@
 import { INITIAL_Z_INDEX, navIcons, navLinks } from "@constants";
-import { useWindowStore, type WindowKey } from "@store";
+import { useWindowStore } from "@store";
 import dayjs from "dayjs";
 
 const NavBar = () => {
