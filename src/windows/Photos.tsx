@@ -36,16 +36,22 @@ const Photos = () => {
         <div className="gallery scroll-style overflow-y-auto flex-1">
           <ul>
             {gallery.map((item) => (
-              <li
-                key={item.id}
-                onClick={() =>
-                  openWindow("imgfile", {
-                    name: item.name,
-                    imageUrl: item.img,
-                  })
-                }
-              >
-                <img src={item.img} alt={item.name || `Photo ${item.id}`} loading="lazy" />
+              <li key={item.id}>
+                <button
+                  type="button"
+                  onClick={() =>
+                    openWindow("imgfile", {
+                      name: item.name,
+                      imageUrl: item.img,
+                    })
+                  }
+                >
+                  <img
+                    src={item.img}
+                    alt={item.name || `Photo ${item.id}`}
+                    loading="lazy"
+                  />
+                </button>
               </li>
             ))}
           </ul>
