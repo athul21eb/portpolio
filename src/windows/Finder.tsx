@@ -43,7 +43,8 @@ const Finder = () => {
       )
         return window.open(item.href, "_blank");
 
-      if(item.kind){
+      if (item.kind) {
+        // Window keys are constructed as <fileType><kind> to match WINDOW_CONFIG entries like 'txtfile' or 'imgfile'
         return openWindow(`${item.fileType}${item.kind}`, item);
       }
     }

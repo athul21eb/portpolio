@@ -140,7 +140,7 @@ body {
         @apply grid grid-cols-12 space-x-5;
 
         img {
-          @apply size-1/2 rounded-md object-center;
+          @apply size-1/2 rounded-md object-contain;
         }
 
         .content {

@@ -1,4 +1,6 @@
-const navLinks = [
+import type { WindowKey } from "@store";
+
+const navLinks: Array<{ id: number; name: string; type: WindowKey }> = [
   {
     id: 1,
     name: "Projects",

@@ -20,10 +20,10 @@ const Home = () => {
   return (
     <section id="home">
       <ul>
-        {projects.map((project) => (
+        {projects.map((project, index) => (
           <li
             onClick={() => handleFolderOpen(project)}
-            key={project?.id ?? project.name}
+            key={project?.id ?? project?.name ?? `project-${index}`}
             className={clsx("group folder", project?.windowPosition)}
           >
             {project?.icon && (
